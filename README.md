@@ -54,3 +54,24 @@ p
 
 ![GitHub Logo](/plots_gifs/popularity.png)
 
+
+``` r
+# saving plot
+ggsave(filename = "plots_gifs/popularity.png", plot = p, width = 10, height = 6)
+
+# changing default options for gif
+options(gganimate.dev_args = list(width = 1000, height = 600))
+
+# animation
+ap <- p +
+  geom_point(aes(y = hits, group = keyword, color = keyword), size = 3) +
+  transition_reveal(along = date) 
+
+# checking animation
+animate(ap, end_pause = 10)
+
+# saving animation
+anim_save(filename = "plots_gifs/popularity.gif", animation = ap)
+
+```
+![GitHub Logo](/plots_gifs/popularity.gif)

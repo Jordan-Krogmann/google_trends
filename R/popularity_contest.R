@@ -67,7 +67,7 @@ ap <- p +
 animate(ap, end_pause = 10)
 
 # saving animation
-anim_save(filename = "plots_gifs/popularity.gif", animation = ap)
+anim_save(filename = "plots_gifs/popularity.gif", animation = ap, end_pause = 10)
 
 
 

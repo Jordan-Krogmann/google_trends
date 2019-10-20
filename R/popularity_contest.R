@@ -2,13 +2,9 @@
 
 
 # ---- set up ----- 
-
 library(gtrendsR)   # easy acces to google trends
 library(tidyverse)  # data manipulation and plotting
 library(gganimate)  # animating the plot
-
-
-
 
 # ---- data ----
 

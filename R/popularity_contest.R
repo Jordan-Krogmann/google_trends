@@ -25,7 +25,6 @@ p <- ggplot(
     data = g_trend_df
   , aes(x = as.Date(date),y = hits, group = keyword, color = keyword)) + 
   geom_line(size = 1.5) + 
-  # geom_point(aes(y = hits, group = keyword, color = keyword), size = 2.5) +
   expand_limits(y = c(0,100)) + 
   scale_y_continuous(breaks=seq(0, 100, by=20)) +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") + 

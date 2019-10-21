@@ -50,15 +50,15 @@ p <- ggplot(
 
 # printing plot
 p
+
+# saving plot
+ggsave(filename = "plots_gifs/popularity.png", plot = p, width = 10, height = 6)
 ```
 
 ![GitHub Logo](/plots_gifs/popularity.png)
 
 
 ``` r
-# saving plot
-ggsave(filename = "plots_gifs/popularity.png", plot = p, width = 10, height = 6)
-
 # changing default options for gif
 options(gganimate.dev_args = list(width = 1000, height = 600))
 

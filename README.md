@@ -1,5 +1,5 @@
 # google_trends
-Few examples at pulling Google Trend data using the gtrends package in R
+Few examples at pulling Google Trend data using the gtrends package in R.  The sample code below is my version of the Spurious Correlations.
 
 
 ``` r

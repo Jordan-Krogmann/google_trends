@@ -1,5 +1,5 @@
 # Google Trends Package in R
-Few examples at pulling Google Trend data using the gtrends package in R.  The sample code below is my version of the Spurious Correlations.  The peaks where potatoes become more "popular" than the keyword Jordan is right around Thanksgiving, people must be looking for those holiday recipes. 
+Few examples at pulling Google Trend data using the gtrends package in R.  The sample code below is my version of the Spurious Correlations.  The peaks where potatoes become more "popular" than the keyword Jordan is right around Thanksgiving, people must be looking for those holiday recipes... 
 
 # Initial Plot
 ``` r

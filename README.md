@@ -14,17 +14,21 @@ g_trend <-  gtrends(
   keyword = c("jordan", "potato"), # key terms to compare
   geo = "US",                      # location 
   time = "today+5-y"               # time span
-  )
+)
 
 # ----- interest over time
 g_trend_df <- g_trend$interest_over_time
 
 # plot
 p <- ggplot(
-    data = g_trend_df
-  , aes(x = as.Date(date),y = hits, group = keyword, color = keyword)) + 
+    data = g_trend_df, 
+    aes(
+      x = as.Date(date),
+      y = hits, group = keyword, color = keyword
+    )
+  ) + 
   geom_line(size = 1.5) + 
-  expand_limits(y = c(0,100)) + 
+  expand_limits(y = c(0, 100)) + 
   scale_y_continuous(breaks=seq(0, 100, by=20)) +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") + 
   theme_minimal() +
@@ -73,7 +77,11 @@ ap <- p +
 animate(ap, end_pause = 10)
 
 # saving animation
-anim_save(filename = "plots_gifs/popularity.gif", animation = ap, end_pause = 10)
+anim_save(
+  filename = "images/popularity.gif", 
+  animation = ap, 
+  end_pause = 10
+)
 
 ```
-![GitHub Logo](/plots_gifs/popularity.gif)
+![](/images/popularity.gif)

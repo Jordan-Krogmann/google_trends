@@ -21,12 +21,12 @@ g_trend_df <- g_trend$interest_over_time
 
 # plot
 p <- ggplot(
-    data = g_trend_df, 
-    aes(
-      x = as.Date(date),
-      y = hits, group = keyword, color = keyword
-    )
-  ) + 
+  data = g_trend_df, 
+  aes(
+    x = as.Date(date),
+    y = hits, group = keyword, color = keyword
+  )
+) + 
   geom_line(size = 1.5) + 
   expand_limits(y = c(0, 100)) + 
   scale_y_continuous(breaks=seq(0, 100, by=20)) +
@@ -59,7 +59,7 @@ p
 ggsave(filename = "plots_gifs/popularity.png", plot = p, width = 10, height = 6)
 ```
 
-![GitHub Logo](/plots_gifs/popularity.png)
+![GitHub Logo](/images/popularity.png)
 
 
 # Using gganimate 
